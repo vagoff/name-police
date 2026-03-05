@@ -33,3 +33,8 @@ Why it matters / where else it applies.
 - A new developer in 10 minutes understands non-trivial decisions that would otherwise take a month of trial and error.
 - A skills file is written *during* the work, not after — an insight is captured while it's fresh. Connection to → asymmetric-cost-of-omission: the cost of an unrecorded insight is irretrievable.
 - Over time, patterns that recur across skills files of different projects are candidates for idealib as core units.
+
+## Key property: the file is alive
+A skills file is not written once at project completion — it is updated throughout the life of the project. Found a new pattern a month later — add it. An old insight turned out to be wrong — fix it. This is not release documentation, it is a living diary of the team's technical discoveries.
+
+This distinguishes it from post-mortems and retrospectives which are written after the fact and quickly go stale. A skills file is always current because it is updated at the moment of discovery.
