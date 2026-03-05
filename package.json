@@ -1,0 +1,18 @@
+{
+  "name": "name-police",
+  "version": "0.1.0",
+  "description": "Static analysis tool that enforces naming conventions as a type system",
+  "main": "src/checker.js",
+  "bin": {
+    "name-police": "src/checker.js"
+  },
+  "keywords": [
+    "lint", "static-analysis", "naming-convention", "code-style",
+    "ast", "babel", "javascript", "typescript"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@babel/parser": "^7.0.0",
+    "@babel/traverse": "^7.0.0"
+  }
+}

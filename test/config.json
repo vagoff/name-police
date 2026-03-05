@@ -1,0 +1,6 @@
+{
+  "constructors": {
+    "DB_ToolBox": "^(dbt|new_dbt|dbt2|tmp_dbt)$",
+    "C1": "^xxx[A-Za-z0-9_]+"
+  }
+}
