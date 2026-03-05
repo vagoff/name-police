@@ -187,3 +187,12 @@ name-police is what you get when you observe that **naming discipline + mechanic
 ## License
 
 MIT
+
+---
+
+## Authors
+
+Built by [@vagoff](https://github.com/vagoff) and [Claude](https://claude.ai) (Anthropic) in one sitting.
+
+The idea, architecture, and every "wait, you didn't handle this case" — vagoff.  
+The typing — Claude.
