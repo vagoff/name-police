@@ -31,6 +31,18 @@ No type inference. No runtime overhead. No PhD required.
 
 This is not Hungarian notation. Hungarian notation adds cognitive load by encoding type into a prefix nobody asked for. name-police lets you use **good names** — short, readable, obvious — and then enforces them. `dbt` is just a good name for a database toolbox. The machine-checked invariant is a free bonus.
 
+### One name. One contract. Everywhere.
+
+name-police enforces a second invariant that makes the whole system click:
+
+> **Every method or function name must have exactly one signature across the entire codebase.**
+
+If `process(dbt, userId)` exists anywhere, then every `process()` in every file must take the same parameters in the same order. Two classes with a `process` that means different things? Rename one of them.
+
+This sounds strict. It is. And it's the reason name-police can check call sites **without knowing which class owns the method**. When you write `svc.process(helper, 42)`, name-police doesn't need to resolve `svc` — it looks up `process` in the global signature table and knows argument 1 must be `dbt*`. No type inference, no class hierarchy traversal.
+
+The side effect: it forces you to mean what you name things. A codebase where `process` always means the same thing is a better codebase.
+
 ---
 
 ## Install
