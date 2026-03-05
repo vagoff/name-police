@@ -4,12 +4,14 @@ const visitAssignmentFlow     = require('./visitors/assignment-flow');
 const visitCallArgNaming      = require('./visitors/call-arg-naming');
 const visitForbiddenContexts  = require('./visitors/forbidden-contexts');
 const visitStrictConstructors = require('./visitors/strict-constructors');
+const visitLiteralArgs        = require('./visitors/literal-args');
 
 const VISITORS = [
   visitStrictConstructors,
   visitConstructorNaming,
   visitAssignmentFlow,
   visitCallArgNaming,
+  visitLiteralArgs,
   visitForbiddenContexts,
 ];
 

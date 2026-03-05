@@ -1,0 +1,7 @@
+{
+  "constructors": {},
+  "literalArgs": {
+    "setMode": { "0": ["read", "write", "admin"] },
+    "connect": { "1": ["tcp", "udp"] }
+  }
+}

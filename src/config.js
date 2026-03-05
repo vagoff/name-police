@@ -33,8 +33,9 @@ function loadConfig(configObj) {
 
   const strictConstructors = configObj.strictConstructors === true;
   const allowedConstructors = new Set(configObj.allowedConstructors || []);
+  const literalArgs = configObj.literalArgs || null;
 
-  return { constructors, strictConstructors, allowedConstructors };
+  return { constructors, strictConstructors, allowedConstructors, literalArgs };
 }
 
 // Given a variable name, find which pattern it matches (if any)
