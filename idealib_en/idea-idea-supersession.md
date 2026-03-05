@@ -1,6 +1,6 @@
 ---
 id: idea-supersession
-revnum: 1
+revnum: 2
 author: vagoff
 home: https://github.com/vagoff/name-police
 tags: [arch, ai-dev, principle]
@@ -8,20 +8,22 @@ strength: core
 ---
 
 ## Statement
-When an idea is absorbed by a more abstract one — it moves to an archive, not deleted. The working library contains only current ideas, the archive preserves history and prevents links from becoming broken.
+When an idea is COMPLETELY absorbed by a more abstract one — it moves to the attic (attic/), not deleted. Partial overlap is not grounds for moving. The working library contains only current ideas, the attic preserves history and prevents links from becoming broken.
 
 ## Reasoning
-Deleting an idea breaks links from other units, from SKILLS.md, from external sources. An archive solves this without cluttering the working space: current ideas live in idealib_ru/ and idealib_en/, superseded ones in idealib_archive/. The working context stays clean, history is not lost.
+Deleting an idea breaks links from other units, from SKILLS.md, from external sources. The attic solves this without cluttering the working space: current ideas live in idealib_ru/ and idealib_en/, fully superseded ones in idealib_attic/.
 
-Boundary: archive only when supersession is complete — the new idea contains the essence of the old one as a special case. If ideas are merely similar — both remain.
+Full supersession: the new idea contains the essence of the old one as a special case, and referring to the old one adds no additional information. Partial overlap or intersection — both ideas remain in the working library.
+
+Boundary: when in doubt — keep in the working library. To the attic only when supersession is obvious and complete.
 
 ## Examples
-**name-police/idealib:** `semgrep-vs-custom-ast` was absorbed by `wrapper-complexity-threshold`. The right move — move to archive, not delete. Links from other units would have stayed alive, the history of the decision would have been preserved.
+**name-police/idealib:** `semgrep-vs-custom-ast` was fully superseded by `wrapper-complexity-threshold` — the new one contains the same essence without binding to specific tools. Right move — transfer to attic, not delete.
 
-**Code analogy:** a deprecated API is not deleted immediately — it is marked and lives until the next major version. An idea archive works by the same logic.
+**Anti-example:** two ideas about naming partially overlap — both remain. Overlap is not supersession.
 
 ## Consequences
-- Repo structure: `idealib_ru/`, `idealib_en/` — working; `idealib_archive/` — archive with superseded units.
-- An archived file should have a header: `superseded-by: wrapper-complexity-threshold` — so the reader immediately knows where to look.
-- Connection to → knowledge-colocation: the archive lives in the same repo — links are never broken by definition.
-- Over time the archive becomes a history of the evolution of thinking — you can see how ideas grew and absorbed each other.
+- Structure: `idealib_ru/`, `idealib_en/` — working; `idealib_attic/` — attic.
+- In the attic file add `superseded-by: slug` — so the reader immediately knows where to look.
+- Connection to → knowledge-colocation: attic is in the same repo — links are never broken by definition.
+- The attic over time becomes a history of the evolution of thinking — you can see how ideas grew and absorbed each other.
