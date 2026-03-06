@@ -218,3 +218,13 @@ This repository includes a library of atomic ideas born while building name-poli
 **[→ IDEALIB_INDEX.md](https://raw.githubusercontent.com/vagoff/name-police/main/IDEALIB_INDEX.md)** — full list of all idea files with direct URLs, for agents and tools that can't browse directories.
 
 Browse directly: [`idealib_en/`](./idealib_en) · [`idealib_ru/`](./idealib_ru) · [`idealib_attic/`](./idealib_attic)
+
+---
+
+## idealib — idea library
+
+This repo includes a library of atomic idea units extracted from building name-police — on static analysis, architecture, naming, and working with LLMs.
+
+**[→ Full index: INDEX.md](INDEX.md)**
+
+`idealib_en/` — English · `idealib_ru/` — Russian · `idealib_attic/` — superseded
