@@ -1,7 +1,7 @@
 # name-police / idealib index
 
 Machine-readable index of all idea units.
-Regenerate with `scripts/gen-index.sh` (runs automatically on `git push`).
+Regenerate with `node scripts/gen-index.js` (runs automatically on `git push`).
 Each link is a GitHub blob URL — fetchable by agents and LLMs.
 
 ## idealib_en
@@ -61,4 +61,3 @@ Each link is a GitHub blob URL — fetchable by agents and LLMs.
 ## idealib_attic
 
 - [semgrep-vs-custom-ast](https://github.com/vagoff/name-police/blob/main/idealib_attic/idea-semgrep-vs-custom-ast.md) `useful` [dev, arch, principle]
-

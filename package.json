@@ -7,12 +7,19 @@
     "name-police": "src/checker.js"
   },
   "keywords": [
-    "lint", "static-analysis", "naming-convention", "code-style",
-    "ast", "babel", "javascript", "typescript"
+    "lint",
+    "static-analysis",
+    "naming-convention",
+    "code-style",
+    "ast",
+    "babel",
+    "javascript",
+    "typescript"
   ],
   "license": "MIT",
   "dependencies": {
     "@babel/parser": "^7.0.0",
     "@babel/traverse": "^7.0.0"
-  }
+  },
+  "type": "module"
 }
