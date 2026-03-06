@@ -1,0 +1,20 @@
+#!/bin/bash
+# Auto-regenerate INDEX.md before every push.
+# Install once per clone: git config core.hooksPath .githooks
+
+SCRIPT="scripts/gen-index.sh"
+
+if [ ! -f "$SCRIPT" ]; then
+  echo "pre-push: $SCRIPT not found, skipping"
+  exit 0
+fi
+
+bash "$SCRIPT"
+
+if git diff --quiet INDEX.md; then
+  exit 0
+fi
+
+echo "pre-push: INDEX.md changed, amending last commit..."
+git add INDEX.md
+git commit --amend --no-edit --quiet

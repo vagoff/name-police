@@ -228,3 +228,11 @@ This repo includes a library of atomic idea units extracted from building name-p
 **[→ Full index: INDEX.md](INDEX.md)**
 
 `idealib_en/` — English · `idealib_ru/` — Russian · `idealib_attic/` — superseded
+
+### Setup after cloning
+
+```bash
+git config core.hooksPath .githooks
+```
+
+This enables the pre-push hook that auto-regenerates `INDEX.md` on every push.
