@@ -208,3 +208,13 @@ Built by [@vagoff](https://github.com/vagoff) and [Claude](https://claude.ai) (A
 
 The idea, architecture, and every "wait, you didn't handle this case" — vagoff.  
 The typing — Claude.
+
+---
+
+## idealib
+
+This repository includes a library of atomic ideas born while building name-police — on static analysis, architecture, naming, and working with LLMs.
+
+**[→ IDEALIB_INDEX.md](https://raw.githubusercontent.com/vagoff/name-police/main/IDEALIB_INDEX.md)** — full list of all idea files with direct URLs, for agents and tools that can't browse directories.
+
+Browse directly: [`idealib_en/`](./idealib_en) · [`idealib_ru/`](./idealib_ru) · [`idealib_attic/`](./idealib_attic)

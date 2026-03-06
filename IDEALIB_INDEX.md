@@ -1,0 +1,55 @@
+# idealib index
+
+All idea files with direct raw URLs. Fetch this file first, then fetch individual ideas.
+
+## idealib_en
+- [idea-asymmetric-cost-of-omission.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-asymmetric-cost-of-omission.md)
+- [idea-claude-github-workflow.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-claude-github-workflow.md)
+- [idea-closed-system-invariant.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-closed-system-invariant.md)
+- [idea-cognitive-scope-colocation.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-cognitive-scope-colocation.md)
+- [idea-dialogue-mining.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-dialogue-mining.md)
+- [idea-global-signature-uniqueness.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-global-signature-uniqueness.md)
+- [idea-good-names-as-free-types.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-good-names-as-free-types.md)
+- [idea-idea-supersession.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-idea-supersession.md)
+- [idea-ignore-primitives-for-decidability.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-ignore-primitives-for-decidability.md)
+- [idea-knowledge-colocation.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-knowledge-colocation.md)
+- [idea-knowledge-unit-store.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-knowledge-unit-store.md)
+- [idea-maximal-abstraction.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-maximal-abstraction.md)
+- [idea-mess-definition.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-mess-definition.md)
+- [idea-naming-as-type-system.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-naming-as-type-system.md)
+- [idea-project-skills-file.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-project-skills-file.md)
+- [idea-relevance-orthogonal-to-quality.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-relevance-orthogonal-to-quality.md)
+- [idea-responsibility-as-north-star.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-responsibility-as-north-star.md)
+- [idea-small-scale-ideas.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-small-scale-ideas.md)
+- [idea-two-pass-ast-analysis.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-two-pass-ast-analysis.md)
+- [idea-visitor-pipeline-pattern.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-visitor-pipeline-pattern.md)
+- [idea-whitelist-over-blacklist-linting.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-whitelist-over-blacklist-linting.md)
+- [idea-wrapper-complexity-threshold.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_en/idea-wrapper-complexity-threshold.md)
+
+## idealib_ru
+- [idea-asymmetric-cost-of-omission.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-asymmetric-cost-of-omission.md)
+- [idea-claude-github-workflow.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-claude-github-workflow.md)
+- [idea-closed-system-invariant.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-closed-system-invariant.md)
+- [idea-cognitive-scope-colocation.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-cognitive-scope-colocation.md)
+- [idea-dialogue-mining.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-dialogue-mining.md)
+- [idea-global-signature-uniqueness.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-global-signature-uniqueness.md)
+- [idea-good-names-as-free-types.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-good-names-as-free-types.md)
+- [idea-idea-supersession.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-idea-supersession.md)
+- [idea-ignore-primitives-for-decidability.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-ignore-primitives-for-decidability.md)
+- [idea-knowledge-colocation.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-knowledge-colocation.md)
+- [idea-knowledge-unit-store.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-knowledge-unit-store.md)
+- [idea-maximal-abstraction.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-maximal-abstraction.md)
+- [idea-mess-definition.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-mess-definition.md)
+- [idea-naming-as-type-system.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-naming-as-type-system.md)
+- [idea-project-skills-file.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-project-skills-file.md)
+- [idea-relevance-orthogonal-to-quality.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-relevance-orthogonal-to-quality.md)
+- [idea-responsibility-as-north-star.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-responsibility-as-north-star.md)
+- [idea-small-scale-ideas.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-small-scale-ideas.md)
+- [idea-two-pass-ast-analysis.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-two-pass-ast-analysis.md)
+- [idea-visitor-pipeline-pattern.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-visitor-pipeline-pattern.md)
+- [idea-whitelist-over-blacklist-linting.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-whitelist-over-blacklist-linting.md)
+- [idea-wrapper-complexity-threshold.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_ru/idea-wrapper-complexity-threshold.md)
+
+## idealib_attic
+- [idea-semgrep-vs-custom-ast.md](https://raw.githubusercontent.com/vagoff/name-police/main/idealib_attic/idea-semgrep-vs-custom-ast.md)
+
