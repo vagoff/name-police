@@ -211,21 +211,11 @@ The typing — Claude.
 
 ---
 
-## idealib
-
-This repository includes a library of atomic ideas born while building name-police — on static analysis, architecture, naming, and working with LLMs.
-
-**[→ IDEALIB_INDEX.md](https://raw.githubusercontent.com/vagoff/name-police/main/IDEALIB_INDEX.md)** — full list of all idea files with direct URLs, for agents and tools that can't browse directories.
-
-Browse directly: [`idealib_en/`](./idealib_en) · [`idealib_ru/`](./idealib_ru) · [`idealib_attic/`](./idealib_attic)
-
----
-
 ## idealib — idea library
 
 This repo includes a library of atomic idea units extracted from building name-police — on static analysis, architecture, naming, and working with LLMs.
 
-**[→ Full index: INDEX.md](INDEX.md)**
+**[→ Idea Library Index](https://github.com/vagoff/name-police/blob/main/INDEX.md)** — full list with blob URLs, fetchable by agents and LLMs.
 
 `idealib_en/` — English · `idealib_ru/` — Russian · `idealib_attic/` — superseded
 
