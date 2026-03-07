@@ -2,6 +2,7 @@
 
 Design decisions and the reasoning behind them.
 For operational guide (how to run, grep, navigate) — see CODEBASE.md.
+For pre-implementation research and tool selection — see RESEARCH.md.
 For atomic idea units — see idealib/.
 
 ---
@@ -163,39 +164,6 @@ lex-police/checker.js
 
 No circular dependencies. `config.js` is the only shared module across pass1, pass2,
 and visitors — intentional: it is the configuration contract for the whole system.
-
----
-
-## Pre-decision research: lex-police tool selection
-
-Before implementing lex-police, two independent sources (Grok, queried separately
-with the same question) were consulted on: "ESLint custom rules vs Semgrep vs shell
-script vs something else for enforcing structural/positional JS conventions in 2026".
-
-**Key finding from research:** the rules split into two classes with different tool
-requirements:
-
-| Class | Examples | Best tool |
-|---|---|---|
-| Positional | `^function \w+(`, method at column 4 | text/regex reliable |
-| Semantic | `Super` only in mixin, `let` forbidden | AST required |
-
-**Grok run 1** recommended Semgrep as best fit for the mixed positional+semantic case.
-**Grok run 2** recommended ESLint custom rules as most widely adopted for JS teams.
-
-Both answers were correct for their framing. Neither accounted for the project context:
-`@babel/parser` already present, visitor-pipeline pattern already established,
-cross-file analysis already implemented. Adding Semgrep or ESLint custom rules would
-introduce an intermediate layer whose complexity matched the checker itself.
-
-**Decision:** `@babel/parser` + `@babel/traverse` directly, same stack as name-police.
-Shell script rejected: unreliable for semantic rules, blind to comments.
-Semgrep rejected: wrapper complexity threshold crossed (see `idea-wrapper-complexity-threshold`).
-ESLint custom rules rejected: file-scoped by design, cross-file pass would require
-the same two-pass architecture anyway, plus plugin boilerplate.
-
-See: `idea-pre-decision-research-as-artifact`, `idea-wrapper-complexity-threshold`,
-`idealib_attic/idea-semgrep-vs-custom-ast`.
 
 ---
 
