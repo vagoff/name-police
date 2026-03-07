@@ -27,3 +27,4 @@ Boundary: the principle works when usage patterns have stabilized. In a new proj
 - Folder structure becomes alive: if work patterns change — structure should change accordingly.
 - The ban on `utils/` is derived from this principle: utils has no cognitive scope — it's a dump, not a folder.
 - Applies not only to code: any organization of files, documents, notes obeys the same principle.
+- Connection to → knowledge-colocation: the same principle at a higher level — knowledge units that are used together in sessions should live in the same repository, not scattered across wikis and Notions. Cognitive scope applies equally to files within a project and to knowledge about the project.

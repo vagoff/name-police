@@ -25,3 +25,4 @@ Boundary: not every remark is an idea. The criterion: can this be formulated as 
 - An LLM handles this task well: ask it to go through the conversation history and identify candidates for idea files — it sees the full context at once.
 - Over time you develop an instinct: you start noticing ideas at the moment of their birth and capturing them immediately without waiting for the end of the session.
 - Dialogue with an LLM is especially rich ore — because the LLM generates observations and consequences that a person working alone might not notice.
+- Structural metaphor: a dialogue is a **call stack**. Ideas are allocated during execution. Mining is a GC pass that promotes live objects into long-term storage before the stack is released. This explains why mining *at the end of a session* is not a habit but a structural necessity — after the stack is freed, the context for understanding is gone.

@@ -1,6 +1,6 @@
 ---
 id: ignore-primitives-for-decidability
-revnum: 1
+revnum: 2
 author: vagoff
 home: https://github.com/vagoff/name-police
 tags: [cs, arch, principle]
@@ -24,3 +24,4 @@ Boundary: requires that the "decidable part" is valuable enough on its own. If v
 - A tool that never lies in its domain is trusted more than a tool with 95% accuracy.
 - "We don't cover primitives" is not a weakness — it's an honest statement of scope.
 - Strategic rejection of the undecidable is a sign of design maturity, not incompleteness.
+- Causal connection to → naming-as-type-system: that idea is *possible* precisely because this one holds. Naming-as-type-system works only for instances of named classes. The moment you try to extend it to primitives — the invariant breaks and false positives appear. The decidable domain is not accidental; it is the direct consequence of the cut made here.

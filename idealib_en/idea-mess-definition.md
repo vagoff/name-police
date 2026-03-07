@@ -31,3 +31,4 @@ Boundary: the definition is structural, not dynamic. The causes of mess (process
 - The definition implies the cure: assign responsibility, restore boundaries, eliminate duplicates — and these are three independent actions.
 - Codebase comprehension complexity grows as O(n²) with mess and as O(n) without it — because mess pushes the dependency graph toward complete.
 - The definition applies beyond code: knowledge bases, microservices, team roles — mess has the same structure everywhere.
+- **Mess is measurable.** The degree of disorder is the count of injectivity violations in the component→responsibility mapping. This makes refactoring prioritizable by metric rather than intuition: fix the components with the most violations first. "This module is a mess" becomes "this module has 4 responsibility violations" — and that is a concrete, actionable number.

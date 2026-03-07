@@ -26,3 +26,4 @@ Boundary: knowledge specific to the project. Universal ideas may live in a separ
 - **Fork carries everything.** Whoever forked the project gets not just the code but the history of thinking, idealib, SKILLS.md. Knowledge is not lost when the project is handed over.
 - **No search problem.** Everything in one `git clone`. No need to remember where the documentation lives, who has access, which version is current.
 - **Birth context is preserved.** An idea is captured at the moment it was influencing decisions — that is the most valuable moment for a future reader.
+- Connection to → cognitive-scope-colocation: both principles are the same locality-of-reference applied at different levels. That one — files within a project. This one — knowledge within a repository. The common root: things used together should live together.
