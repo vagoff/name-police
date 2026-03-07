@@ -12,6 +12,7 @@ function getRemote() {
     const url = execSync('git remote get-url origin', { encoding: 'utf8' }).trim();
     return url
       .replace(/https:\/\/[^@]+@github\.com\//, 'https://github.com/')
+      .replace(/^git@github\.com:/, 'https://github.com/')
       .replace(/\.git$/, '');
   } catch { return 'https://github.com/OWNER/REPO'; }
 }
@@ -40,7 +41,7 @@ function getFiles(dir) {
   } catch { return []; }
 }
 
-const base = `${getRemote()}/blob/${getBranch()}`;
+const base = `${getRemote().replace('https://github.com/', 'https://raw.githubusercontent.com/')}/${getBranch()}`;
 const lines = [
   '# name-police / idealib index',
   '',
