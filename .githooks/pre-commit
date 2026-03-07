@@ -1,0 +1,34 @@
+#!/bin/bash
+# pre-commit: run lex-police and name-police on staged .js files
+
+STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep '\.js$')
+
+if [ -z "$STAGED" ]; then
+    exit 0
+fi
+
+ERRORS=0
+
+# --- lex-police ---
+echo "lex-police: checking structural conventions..."
+node lex-police/index.js $STAGED
+if [ $? -ne 0 ]; then
+    ERRORS=1
+fi
+
+# --- name-police ---
+if [ -f ".name-police.json" ]; then
+    echo "name-police: checking naming conventions..."
+    node src/checker.js .name-police.json $STAGED
+    if [ $? -ne 0 ]; then
+        ERRORS=1
+    fi
+fi
+
+if [ $ERRORS -ne 0 ]; then
+    echo ""
+    echo "✗ Commit blocked. Fix violations above."
+    exit 1
+fi
+
+exit 0
