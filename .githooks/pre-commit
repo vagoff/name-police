@@ -1,5 +1,5 @@
 #!/bin/bash
-# pre-commit: run lex-police and name-police on staged .js files
+# pre-commit: structural check + naming check + index rebuild
 
 STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep '\.js$')
 
@@ -29,6 +29,17 @@ if [ $ERRORS -ne 0 ]; then
     echo ""
     echo "✗ Commit blocked. Fix violations above."
     exit 1
+fi
+
+# --- build index (only if checks passed) ---
+ALL_JS=$(git ls-files '*.js')
+if [ -n "$ALL_JS" ]; then
+    echo "build-index: rebuilding CODEBASE-INDEX.json..."
+    node lex-police/build-index.js $ALL_JS --out CODEBASE-INDEX.json
+    if [ $? -eq 0 ] && ! git diff --quiet CODEBASE-INDEX.json; then
+        git add CODEBASE-INDEX.json
+        echo "build-index: CODEBASE-INDEX.json staged."
+    fi
 fi
 
 exit 0
