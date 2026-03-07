@@ -1,15 +1,7 @@
 // Rule: block comments must not contain lines matching structural patterns.
 // If you want to comment out a class/function — add a leading space to the line.
-//
-// Operates on ast.comments directly, not on traverse path.
 
-const STRUCTURAL_PATTERNS = [
-    { re: /^function \w+\(/,  label: 'top-level function' },
-    { re: /^class \w+ /,      label: 'class' },
-    { re: /^    \w+\(/,       label: 'method (4-space indent)' },
-    { re: /^const \w+ =/,     label: 'top-level const' },
-    { re: /^module\.exports/, label: 'module.exports' },
-];
+import { PATTERNS } from '../patterns.js';
 
 export function checkBlockComments(ast, { filename, errors }) {
     const comments = ast.comments || [];
@@ -22,15 +14,14 @@ export function checkBlockComments(ast, { filename, errors }) {
 
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i];
-            const lineNum = startLine + i;
 
-            for (const { re, label } of STRUCTURAL_PATTERNS) {
+            for (const { re, label } of PATTERNS) {
                 if (re.test(line)) {
                     errors.push({
                         file: filename,
-                        line: lineNum,
+                        line: startLine + i,
                         message: `Block comment contains a line matching ${label} pattern. ` +
-                            `Add a leading space to the line to exclude it from structural analysis.`,
+                            `Add a leading space to exclude it from structural analysis.`,
                     });
                     break;
                 }

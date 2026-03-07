@@ -1,68 +1,40 @@
-// Rule: top-level (Program body) statements must be one of:
-//   - FunctionDeclaration          → function foo(
-//   - ClassDeclaration             → class Foo
-//   - VariableDeclaration (const)  → const x =  (but not assigning an arrow function)
-//   - ExpressionStatement          → module.exports = / module.exports.x =
-//   - 'use strict' / bare require() for side effects
-//
-// Note: top-level "let" is handled by no-toplevel-let visitor (more specific message).
+// Rule: top-level (Program body) statements must match one of the known patterns.
+// top-level "let" is handled separately by no-toplevel-let (better message).
+// top-level arrow is caught here as a special case of const.
 
-function isModuleExports(node) {
-    if (node.type !== 'ExpressionStatement') return false;
-    const expr = node.expression;
-    if (expr.type !== 'AssignmentExpression') return false;
-    const left = expr.left;
-    if (
-        left.type === 'MemberExpression' &&
-        left.object?.name === 'module' &&
-        left.property?.name === 'exports'
-    ) return true;
-    if (
-        left.type === 'MemberExpression' &&
-        left.object?.type === 'MemberExpression' &&
-        left.object.object?.name === 'module' &&
-        left.object.property?.name === 'exports'
-    ) return true;
-    return false;
+import { PATTERNS } from '../patterns.js';
+
+function isArrowConst(node) {
+    if (node.type !== 'VariableDeclaration' || node.kind !== 'const') return false;
+    return node.declarations.some(d =>
+        d.init?.type === 'ArrowFunctionExpression' &&
+        !(d.init.params?.length === 1 && d.init.params[0]?.name === 'Super' &&
+          d.init.body?.type === 'ClassExpression')
+    );
 }
 
 function isRequireCall(node) {
     if (node.type !== 'ExpressionStatement') return false;
     const expr = node.expression;
-    if (expr.type !== 'CallExpression') return false;
-    return expr.callee?.name === 'require';
+    return expr.type === 'CallExpression' && expr.callee?.name === 'require';
 }
 
-function isArrowConst(node) {
-    if (node.type !== 'VariableDeclaration' || node.kind !== 'const') return false;
-    return node.declarations.some(d =>
-        d.init?.type === 'ArrowFunctionExpression'
-    );
-}
-
-function isMixinConst(node) {
-    // const M = (Super) => class extends Super { }
-    if (node.type !== 'VariableDeclaration' || node.kind !== 'const') return false;
-    return node.declarations.some(d => {
-        const init = d.init;
-        return init?.type === 'ArrowFunctionExpression' &&
-            init.params?.length === 1 &&
-            init.params[0]?.name === 'Super' &&
-            init.body?.type === 'ClassExpression';
-    });
+function isStrictDirective(node) {
+    return node.type === 'ExpressionStatement' &&
+        node.expression?.type === 'StringLiteral';
 }
 
 export function visitToplevelShape(path, { filename, errors }) {
     if (path.node.type !== 'Program') return;
 
     for (const node of path.node.body) {
-        if (node.type === 'FunctionDeclaration') continue;
-        if (node.type === 'ClassDeclaration') continue;
-        // let is handled by no-toplevel-let with a better message
+        // let is handled by no-toplevel-let with a specific message
         if (node.type === 'VariableDeclaration' && node.kind === 'let') continue;
-        // mixin const is allowed
-        if (isMixinConst(node)) continue;
-        // plain arrow at top level is forbidden
+        // side-effect require() and 'use strict'
+        if (isRequireCall(node)) continue;
+        if (isStrictDirective(node)) continue;
+
+        // top-level arrow function (non-mixin)
         if (isArrowConst(node)) {
             const name = node.declarations[0]?.id?.name ?? '?';
             errors.push({
@@ -73,17 +45,16 @@ export function visitToplevelShape(path, { filename, errors }) {
             });
             continue;
         }
-        if (node.type === 'VariableDeclaration' && node.kind === 'const') continue;
-        if (isModuleExports(node)) continue;
-        if (isRequireCall(node)) continue;
-        if (node.type === 'ExpressionStatement' &&
-            node.expression?.type === 'StringLiteral') continue;
 
-        errors.push({
-            file: filename,
-            line: node.loc?.start?.line,
-            message: `Top-level ${node.type}${node.kind ? ` (${node.kind})` : ''} is not allowed. ` +
-                `Allowed: function, class, const, module.exports.`,
-        });
+        // check against known patterns
+        const matched = PATTERNS.some(p => p.check && p.check(node));
+        if (!matched) {
+            errors.push({
+                file: filename,
+                line: node.loc?.start?.line,
+                message: `Top-level ${node.type}${node.kind ? ` (${node.kind})` : ''} is not allowed. ` +
+                    `Allowed: function, class, const, module.exports, mixin.`,
+            });
+        }
     }
 }
