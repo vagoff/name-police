@@ -2,7 +2,7 @@
 id: enforcer-as-trust-signal
 revnum: 1
 author: vagoff
-home: https://github.com/vagoff/name-police
+home: https://github.com/vagoff/ai_cogs
 tags: [arch, dev, ai-dev, principle]
 strength: core
 ---

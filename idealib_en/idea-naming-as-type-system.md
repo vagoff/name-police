@@ -2,7 +2,7 @@
 id: naming-as-type-system
 revnum: 1
 author: vagoff
-home: https://github.com/vagoff/name-police
+home: https://github.com/vagoff/ai_cogs
 tags: [arch, cs, dev, principle]
 strength: core
 ---

@@ -2,7 +2,7 @@
 id: two-pass-ast-analysis
 revnum: 1
 author: vagoff
-home: https://github.com/vagoff/name-police
+home: https://github.com/vagoff/ai_cogs
 tags: [dev, cs, pattern]
 strength: useful
 ---

@@ -2,7 +2,7 @@
 id: visitor-pipeline-pattern
 revnum: 1
 author: vagoff
-home: https://github.com/vagoff/name-police
+home: https://github.com/vagoff/ai_cogs
 tags: [dev, arch, pattern]
 strength: useful
 ---

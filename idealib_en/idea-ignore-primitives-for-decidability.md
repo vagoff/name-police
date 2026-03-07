@@ -2,7 +2,7 @@
 id: ignore-primitives-for-decidability
 revnum: 2
 author: vagoff
-home: https://github.com/vagoff/name-police
+home: https://github.com/vagoff/ai_cogs
 tags: [cs, arch, principle]
 strength: core
 ---

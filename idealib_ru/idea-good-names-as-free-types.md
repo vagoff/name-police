@@ -2,7 +2,7 @@
 id: good-names-as-free-types
 revnum: 1
 author: vagoff
-home: https://github.com/vagoff/name-police
+home: https://github.com/vagoff/ai_cogs
 tags: [dev, arch, principle]
 strength: core
 ---

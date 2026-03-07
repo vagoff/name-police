@@ -2,7 +2,7 @@
 id: semgrep-vs-custom-ast
 revnum: 1
 author: vagoff
-home: https://github.com/vagoff/name-police
+home: https://github.com/vagoff/ai_cogs
 tags: [dev, arch, principle]
 strength: useful
 superseded-by: wrapper-complexity-threshold

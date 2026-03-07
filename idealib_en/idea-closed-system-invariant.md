@@ -2,7 +2,7 @@
 id: closed-system-invariant
 revnum: 1
 author: vagoff
-home: https://github.com/vagoff/name-police
+home: https://github.com/vagoff/ai_cogs
 tags: [cs, arch, principle]
 strength: core
 ---

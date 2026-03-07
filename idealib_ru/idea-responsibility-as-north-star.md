@@ -2,7 +2,7 @@
 id: responsibility-as-north-star
 revnum: 2
 author: handle
-home: https://github.com/user/ideas
+home: https://github.com/vagoff/ai_cogs
 tags: [arch, dev, cs, principle]
 strength: core
 ---

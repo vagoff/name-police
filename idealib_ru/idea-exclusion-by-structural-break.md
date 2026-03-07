@@ -2,7 +2,7 @@
 id: exclusion-by-structural-break
 revnum: 1
 author: vagoff
-home: https://github.com/vagoff/name-police
+home: https://github.com/vagoff/ai_cogs
 tags: [arch, dev, pattern]
 strength: core
 ---
